@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Russel Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <script>
+    try {
+        const savedSettings = JSON.parse(localStorage.getItem("settings"));
+
+        if (savedSettings && savedSettings.theme === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+    } catch (error) {
+        document.body.classList.remove("dark-mode");
+    }
+</script>
+    <header>
+        <h1>Russel's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prices.html">Works</a></li>
+                <li><a href="creator.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to place a commission, please contact us:</p>
+
+            <form id="contact-form" action="#" method="post" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"
+                       aria-describedby="name-error" required>
+                <p id="name-error" class="error" aria-live="polite"></p>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+                       aria-describedby="email-error" required>
+                <p id="email-error" class="error" aria-live="polite"></p>
+
+                <label for="phone">Phone (optional):</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"
+                          aria-describedby="message-error" required></textarea>
+                <p id="message-error" class="error" aria-live="polite"></p>
+
+                <button type="submit" class="button">Submit</button>
+                <p id="form-status" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+</body>
+</html>

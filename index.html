@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russel's Art Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <script>
+    try {
+        const savedSettings = JSON.parse(localStorage.getItem("settings"));
+
+        if (savedSettings && savedSettings.theme === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+    } catch (error) {
+        document.body.classList.remove("dark-mode");
+    }
+</script>
+    <header>
+        <h1>Russel Portfolio</h1>
+
+        <button type="button" id="menu-button"
+                aria-expanded="true" aria-controls="navigation-menu">
+            Toggle menu
+        </button>
+
+        <button type="button" id="dark-mode-button" aria-pressed="false">
+            Dark mode
+        </button>
+
+        <nav id="navigation-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prices.html">Works</a></li>
+                <li><a href="creator.html">About Me</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <img src="assets/welcome.jpeg"
+                 alt="Artwork featured in Russel's portfolio"
+                 width="200">
+            <h2>Greetings</h2>
+            <p>Welcome to my art portfolio.</p>
+        </section>
+
+        <section>
+            <h2>My Artwork</h2>
+            <div id="artwork-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Russel's Art Portfolio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator - Monel Company</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script>
+    try {
+        const savedSettings = JSON.parse(localStorage.getItem("settings"));
+
+        if (savedSettings && savedSettings.theme === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+    } catch (error) {
+        document.body.classList.remove("dark-mode");
+    }
+</script>
+    <header>
+        <h1>Russel's Portfolios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prices.html">Works</a></li>
+                <li><a href="crssseator.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="card">
+            <img src="assets/russel.jpg" alt="Creator of Monel Company" width="200">
+            <h2>Russel Diaz</h2>
+            <p>2nd Year BMA Student at FEU TECH</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 russel diaz</p>
+    </footer>
+</body>
+</html>
